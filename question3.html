@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What type of engineer should you be?</title>
+</head>
+<body>
+	<h1>What type of engineer should you be?</h1>
+	<form onsubmit="saveResult(event)">
+		<p>What kind of projects excite you the most?</p>
+		<input type="radio" name="q3" value="A"> Building structures or machines<br>
+		<input type="radio" name="q3" value="B"> Solving complex problems<br>
+		<input type="radio" name="q3" value="C"> Designing new products<br>
+		<input type="radio" name="q3" value="D"> Improving existing systems<br>
+		<button type="submit">Next Question</button>
+	</form>
+	<script>
+		function saveResult(event) {
+  event.preventDefault();
+  const answer = document.querySelector('input[name="q3"]:checked').value;
+  sessionStorage.setItem('q4', answer);
+  window.location.replace('question4.html');
+}
+	</script>
+</body>
+</html>

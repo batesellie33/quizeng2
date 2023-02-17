@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What type of engineer should you be?</title>
+</head>
+<body>
+	<h1>What type of engineer should you be?</h1>
+	<form onsubmit="saveResult(event)">
+		<p>What is your ideal work-life balance?</p>
+		<input type="radio" name="q5" value="A"> Long hours and high pressure<br>
+		<input type="radio" name="q5" value="B"> Moderate with occasional pressure<br>
+		<input type="radio" name="q5" value="C"> Flexible where I have control of my hours<br>
+		<input type="radio" name="q5" value="D"> Stable with a good work-life balance<br>
+		<button type="submit">Next Question</button>
+	</form>
+	<script>
+		function saveResult(event) {
+			event.preventDefault();
+			const answer = document.querySelector('input[name="q5"]:checked').value;
+			sessionStorage.setItem('q5', answer);
+
+			const answers = ['q1', 'q2', 'q3', 'q4', 'q5'];
+			let total = 0;
+			for (let i = 0; i < answers.length; i++) {
+				const answer = sessionStorage.getItem(answers[i]);
+				if (answer === 'A') {
+					total += 1;
+				} else if (answer === 'B') {
+					total += 2;
+				} else if (answer === 'C') {
+					total += 3;
+				} else if (answer === 'D') {
+					total += 4;
+				}
+			}
+			const average = total / answers.length;
+			let result = '';
+			if (average < 2) {
+				result = 'A';
+			} else if (average < 3) {
+				result = 'B';
+			} else if (average < 4) {
+				result = 'C';
+			} else {
+				result = 'D';
+			}
+
+			window.location.replace('results.html?result=' + result);
+		}
+	</script>
+</body>
+</html>

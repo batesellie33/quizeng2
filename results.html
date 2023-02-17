@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What type of engineer should you be?</title>
+</head>
+<body>
+	<h1>Results</h1>
+	<p>Your results are in! Based on your answers, we think you should be a:</p>
+	<p id="result"></p>
+	<button onclick="window.location.href = 'question1.html'">Go Back and Retake the Quiz</button>
+
+
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+
+		// get the result from the query string
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const result = urlParams.get('result') || '';
+
+		// display the result on the page
+		let resultText = '';
+		if (result === 'A') {
+			resultText = 'Math or Civil Engineer';
+		} else if (result === 'B') {
+			resultText = 'Computer or Data Engineer';
+		} else if (result === 'C') {
+			resultText = 'Product or Mechanical Engineer';
+		} else if (result === 'D') {
+			resultText = 'Environmental or Systems Engineer';
+		}
+		document.getElementById('result').textContent = resultText;
+	</script>
+</body>
+</html>

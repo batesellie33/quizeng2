@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What type of engineer should you be?</title>
+</head>
+<body>
+	<h1>What type of engineer should you be?</h1>
+	<form onsubmit="saveResult(event)">
+		<p>What is your favourite subject in school?</p>
+		<input type="radio" name="q1" value="A"> Maths<br>
+		<input type="radio" name="q1" value="B"> Science<br>
+		<input type="radio" name="q1" value="C"> Art and Design<br>
+		<input type="radio" name="q1" value="D"> History<br>
+		<button type="submit">Next Question</button>
+	</form>
+	<script>
+		function saveResult(event) {
+  event.preventDefault();
+  const answer = document.querySelector('input[name="q1"]:checked').value;
+  sessionStorage.setItem('q1', answer);
+  window.location.replace('question2.html');
+}
+	</script>
+</body>
+</html>
+
