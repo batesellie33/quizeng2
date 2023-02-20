@@ -23,6 +23,14 @@
   height: 50px;
   padding: 5px;
 }
+.container {
+  border-left: 50px solid #000000;
+}
+
+.main-content {
+  padding: 20px;
+}
+
 body {
   background-color: black;
 }
