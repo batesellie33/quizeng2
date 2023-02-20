@@ -1,7 +1,7 @@
 /* Define the custom font */
 @font-face {
   font-family: 'sans-serif';
-  src: url('https://tedi-london.ac.uk/wp-content/themes/tedi-2021/assets/fonts/Blender-Book.woff2') format('woff');
+  src: url('https://tedi-london.ac.uk/wp-content/themes/tedi-2021/assets/fonts/Blender-Medium.woff2') format('woff2');
 }
 
 /* Select all elements on the page */
