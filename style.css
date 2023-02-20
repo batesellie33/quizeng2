@@ -1,3 +1,20 @@
+/* Set the width of the viewport to the device's width */
+@media only screen and (max-width: 600px) {
+  /* styles for devices with a width of 600px or less */
+  html {
+    width: 100%;
+  }
+}
+
+/* Set the initial zoom level to 1 */
+@media only screen and (max-width: 768px) {
+  /* styles for devices with a width of 768px or less */
+  meta[name=viewport] {
+    width: device-width;
+    initial-scale: 1;
+  }
+}
+
 /* Define the custom font */
 @font-face {
   font-family: 'Blender Medium';
@@ -84,3 +101,4 @@ button[type="submit"]:hover {
 }
 button[type="retry-button"]:hover {
   background-color: #FFF;
+
