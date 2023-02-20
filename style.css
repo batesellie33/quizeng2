@@ -61,6 +61,7 @@ input[type="radio"] {
 button[type="submit"] {
   background-color: #FFEA00;
   color: #000000;
+  margin-top: 10px;
   padding: 10px 20px;
   border: 20px;
   border-radius: 5px;
