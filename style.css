@@ -1,6 +1,9 @@
 /* Select all elements on the page */
 * {
-  font-family: Arial, sans-serif;
+	@font-face {
+  font-family: 'Blenderbook';
+  src: url('https://tedi-london.ac.uk/wp-content/themes/tedi-2021/assets/fonts/Blender-Book.woff2') format('woff');
+}
   color: #333;
 }
 
