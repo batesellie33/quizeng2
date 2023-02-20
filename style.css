@@ -82,3 +82,5 @@ button[type="submit"]:hover {
   font-size: 1.2em;
   cursor: pointer;
 }
+button[type="retry-button"]:hover {
+  background-color: #FFF;
