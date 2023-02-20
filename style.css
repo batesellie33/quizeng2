@@ -1,9 +1,11 @@
-/* Select all elements on the page */
-* {
-	@font-face {
+/* Define the custom font */
+@font-face {
   font-family: 'Blenderbook';
   src: url('https://tedi-london.ac.uk/wp-content/themes/tedi-2021/assets/fonts/Blender-Book.woff2') format('woff');
 }
+
+/* Select all elements on the page */
+* {
   color: #333;
 }
 
@@ -38,3 +40,4 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #006E8B;
 }
+
