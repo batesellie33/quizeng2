@@ -43,6 +43,11 @@ h1 {
 form {
   margin: 20px 0;
 }
+.form-container {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 5px;
+}
 
 p {
   font-weight: bold;
