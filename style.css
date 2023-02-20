@@ -4,8 +4,9 @@
   src: url('https://tedi-london.ac.uk/wp-content/themes/tedi-2021/assets/fonts/Blender-Medium.woff2') format('woff2');
 }
 
-/* Select all elements on the page */
+/* Use the custom font for all elements */
 * {
+  font-family: 'Blender Medium', sans-serif;
   color: #333;
 }
 
