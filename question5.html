@@ -13,15 +13,15 @@
 	<h1>Preparing for your open book exam</h1>
 	<form onsubmit="saveResult(event)" class="form-container">
 		<p>Do you practice active reading strategies?</p>
-		<input type="radio" name="q1" value="A"> Yes, I highlight, take notes, and summarize while reading.<br>
-		<input type="radio" name="q1" value="B"> Sometimes, I only highlight important information<br>
-		<input type="radio" name="q1" value="C"> No, I just read through the material<br>
+		<input type="radio" name="q5" value="A"> Yes, I highlight, take notes, and summarize while reading.<br>
+		<input type="radio" name="q5" value="B"> Sometimes, I only highlight important information<br>
+		<input type="radio" name="q5" value="C"> No, I just read through the material<br>
 		<button type="submit">Next Question</button>
 	</form>
 	<script>
 		function saveResult(event) {
 			event.preventDefault();
-			const answer = document.querySelector('input[name="q1"]:checked').value;
+			const answer = document.querySelector('input[name="q5"]:checked').value;
 			let score = 0;
 			if (answer === 'A') {
 				score = 2;

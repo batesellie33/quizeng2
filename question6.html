@@ -13,15 +13,15 @@
 	<h1>Preparing for your open book exam</h1>
 	<form onsubmit="saveResult(event)" class="form-container">
 		<p>How do you handle distractions while studying?</p>
-		<input type="radio" name="q1" value="A"> I have a designated study space with minimal distraction<br>
-		<input type="radio" name="q1" value="B"> I use noise-cancelling headphones or a white noise app<br>
-		<input type="radio" name="q1" value="C"> I try to ignore the distractions and keep studying<br>
+		<input type="radio" name="q6" value="A"> I have a designated study space with minimal distraction<br>
+		<input type="radio" name="q6" value="B"> I use noise-cancelling headphones or a white noise app<br>
+		<input type="radio" name="q6" value="C"> I try to ignore the distractions and keep studying<br>
 		<button type="submit">Next Question</button>
 	</form>
 	<script>
 		function saveResult(event) {
 			event.preventDefault();
-			const answer = document.querySelector('input[name="q1"]:checked').value;
+			const answer = document.querySelector('input[name="q6"]:checked').value;
 			let score = 0;
 			if (answer === 'A') {
 				score = 2;
