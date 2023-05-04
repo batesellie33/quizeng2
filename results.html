@@ -18,19 +18,17 @@
 		window.history.back();
 	}
 
-	// get the user's answers from the query string
-	const queryString = window.location.search;
-	const urlParams = new URLSearchParams(queryString);
+	// retrieve the user's answers from sessionStorage
 	let score = 0;
 	
 	// calculate the user's score
 	for (let i = 1; i <= 8; i++) {
-		const answer = urlParams.get('q' + i) || '';
-		if (answer === 'A') {
+		const answer = sessionStorage.getItem('q' + i) || '';
+		if (answer === '2') {
 			score += 2;
-		} else if (answer === 'B') {
+		} else if (answer === '1') {
 			score += 1;
-		} else if (answer === 'C') {
+		} else if (answer === '0') {
 			score += 0;
 		}
 	}
