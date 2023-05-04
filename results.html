@@ -26,24 +26,25 @@
 	// calculate the user's score
 	for (let i = 1; i <= 8; i++) {
 		const answer = urlParams.get('q' + i) || '';
-		if (answer === 'a') {
+		if (answer === 'A') {
 			score += 2;
-		} else if (answer === 'b') {
+		} else if (answer === 'B') {
 			score += 1;
 		}
 	}
 
 	// display the appropriate result based on the user's score
 	let resultText = '';
-	if (score >= 14) {
-		resultText = 'Your notetaking, time management, and exam revision skills are exceptional and highly effective for open book exams.';
-		document.getElementById('result').innerHTML = resultText + '<br><img src="math-civil-engineer.png">';
-	} else if (score >= 11) {
-		resultText = 'Your notetaking, time management, and exam revision skills for open book exams are strong but could use some refinement in certain areas.';
-	} else {
-		resultText = 'Your notetaking, time management, and exam revision skills for open book exams are good, but there is room for improvement. Consider seeking feedback from peers or a professor to identify areas for growth.';
-	}
-	document.getElementById('result').textContent = resultText;
+if (score >= 14) {
+    resultText = 'Your notetaking, time management, and exam revision skills are exceptional and highly effective for open book exams.';
+    document.getElementById('result').innerHTML = resultText + '<br><img src="math-civil-engineer.png">';
+} else if (score >= 11) {
+    resultText = 'Your notetaking, time management, and exam revision skills for open book exams are strong but could use some refinement in certain areas.';
+} else {
+    resultText = 'Your notetaking, time management, and exam revision skills for open book exams are good, but there is room for improvement. Consider seeking feedback from peers or a professor to identify areas for growth.';
+}
+document.getElementById('result').innerHTML = resultText;
+
 	</script>
 </body>
 </html>
