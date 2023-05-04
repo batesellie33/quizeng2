@@ -115,3 +115,11 @@ button[type="start-button"] {
 }
 button[type="start-button"]:hover {
   background-color: #FFF;
+  
+  ul, ol {
+  font-size: 20pt;
+}
+
+li {
+  font-size: 20pt;
+}
