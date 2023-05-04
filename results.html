@@ -39,13 +39,16 @@
 	    resultText = 'Your notetaking, time management, and exam revision skills are exceptional and highly effective for open book exams.';
 	} else if (score >= 11) {
 	    resultText = 'Your notetaking, time management, and exam revision skills for open book exams are strong but could use some refinement in certain areas.';
-	} else {
+	} else if (score >= 8) {
 	    resultText = 'Your notetaking, time management, and exam revision skills for open book exams are good, but there is room for improvement. Consider seeking feedback from peers or a professor to identify areas for growth.';
+	} else {
+		resultText = 'Your notetaking, time management, and exam revision skills for open book exams are weak. You should consider seeking additional help and resources to improve your skills before the exam.';
 	}
 	document.getElementById('result').innerHTML = resultText;
 
 	</script>
 </body>
 </html>
+
 
 
