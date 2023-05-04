@@ -13,26 +13,18 @@
 	<h1>Preparing for your open book exam</h1>
 	<form onsubmit="saveResult(event)" class="form-container">
 		<p>How do you allocate time for studying?</p>
-		<input type="radio" name="q4" value="A"> Create a detailed schedule and stick to it<br>
-		<input type="radio" name="q4" value="B"> Prioritise studying over other activities, even socialising or leisure time<br>
-		<input type="radio" name="q4" value="C"> Do not allocate enough time for studying<br>
+		<input type="radio" name="q4" value="2"> Create a detailed schedule and stick to it<br>
+		<input type="radio" name="q4" value="1"> Prioritise studying over other activities, even socialising or leisure time<br>
+		<input type="radio" name="q4" value="0"> Do not allocate enough time for studying<br>
 		<button type="submit">Next Question</button>
 	</form>
-	<script>
-		function saveResult(event) {
-			event.preventDefault();
-			const answer = document.querySelector('input[name="q4"]:checked').value;
-			let score = 0;
-			if (answer === 'A') {
-				score = 2;
-			} else if (answer === 'B') {
-				score = 1;
-			} else {
-				score = 0;
-			}
-			sessionStorage.setItem('q4', score);
-			window.location.replace('question5.html');
-		}
-	</script>
+<script>
+    function saveResult(event) {
+      event.preventDefault();
+      const answer = document.querySelector('input[name="q1"]:checked').value;
+      sessionStorage.setItem('q1', answer);
+      window.location.replace('question2.html');
+    }
+  </script>
 </body>
 </html>

@@ -13,26 +13,18 @@
 	<h1>Preparing for your open book exam</h1>
 	<form onsubmit="saveResult(event)" class="form-container">
 		<p>How do you review your notes?</p>
-		<input type="radio" name="q3" value="A"> Review notes immediately after each node / session and summarise key points<br>
-		<input type="radio" name="q3" value="B"> Create flashcards to test knowledge<br>
-		<input type="radio" name="q3" value="C"> Do not review notes at all<br>
+		<input type="radio" name="q3" value="2"> Review notes immediately after each node / session and summarise key points<br>
+		<input type="radio" name="q3" value="1"> Create flashcards to test knowledge<br>
+		<input type="radio" name="q3" value="0"> Do not review notes at all<br>
 		<button type="submit">Next Question</button>
 	</form>
-	<script>
-		function saveResult(event) {
-			event.preventDefault();
-			const answer = document.querySelector('input[name="q3"]:checked').value;
-			let score = 0;
-			if (answer === 'A') {
-				score = 2;
-			} else if (answer === 'B') {
-				score = 1;
-			} else {
-				score = 0;
-			}
-			sessionStorage.setItem('q3', score);
-			window.location.replace('question4.html');
-		}
-	</script>
+<script>
+    function saveResult(event) {
+      event.preventDefault();
+      const answer = document.querySelector('input[name="q1"]:checked').value;
+      sessionStorage.setItem('q1', answer);
+      window.location.replace('question2.html');
+    }
+  </script>
 </body>
 </html>

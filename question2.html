@@ -13,26 +13,18 @@
 	<h1>Preparing for your open book exam</h1>
 	<form onsubmit="saveResult(event)" class="form-container">
 		<p>How do you organise your notes?</p>
-		<input type="radio" name="q2" value="A"> Use headings and subheadings to categorise information<br>
-		<input type="radio" name="q2" value="B"> Create concept maps or diagrams to connect ideas<br>
-		<input type="radio" name="q2" value="C"> Do not organise notes at all<br>
+		<input type="radio" name="q2" value="2"> Use headings and subheadings to categorise information<br>
+		<input type="radio" name="q2" value="1"> Create concept maps or diagrams to connect ideas<br>
+		<input type="radio" name="q2" value="0"> Do not organise notes at all<br>
 		<button type="submit">Next Question</button>
 	</form>
-	<script>
-		function saveResult(event) {
-			event.preventDefault();
-			const answer = document.querySelector('input[name="q2"]:checked').value;
-			let score = 0;
-			if (answer === 'A') {
-				score = 2;
-			} else if (answer === 'B') {
-				score = 1;
-			} else {
-				score = 0;
-			}
-			sessionStorage.setItem('q2', score);
-			window.location.replace('question3.html');
-		}
-	</script>
+<script>
+    function saveResult(event) {
+      event.preventDefault();
+      const answer = document.querySelector('input[name="q1"]:checked').value;
+      sessionStorage.setItem('q1', answer);
+      window.location.replace('question2.html');
+    }
+  </script>
 </body>
 </html>

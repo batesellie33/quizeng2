@@ -13,27 +13,19 @@
 	<h1>Preparing for your open book exam</h1>
 	<form onsubmit="saveResult(event)" class="form-container">
 		<p>How do you take notes in online learning nodes or in class?</p>
-		<input type="radio" name="q1" value="A"> I use a structured note-taking method (e.g., Cornell notes)<br>
-		<input type="radio" name="q1" value="B"> I take brief notes and fill in details later<br>
-		<input type="radio" name="q1" value="C"> I rely on recordings or slides<br>
+		<input type="radio" name="q1" value="2"> I use a structured note-taking method (e.g., Cornell notes)<br>
+		<input type="radio" name="q1" value="1"> I take brief notes and fill in details later<br>
+		<input type="radio" name="q1" value="0"> I rely on recordings or slides<br>
 		<button type="submit">Next Question</button>
 	</form>
 	<script>
-		function saveResult(event) {
-			event.preventDefault();
-			const answer = document.querySelector('input[name="q1"]:checked').value;
-			let score = 0;
-			if (answer === 'A') {
-				score = 2;
-			} else if (answer === 'B') {
-				score = 1;
-			} else {
-				score = 0;
-			}
-			sessionStorage.setItem('q1', score);
-			window.location.replace('question2.html');
-		}
-	</script>
+    function saveResult(event) {
+      event.preventDefault();
+      const answer = document.querySelector('input[name="q1"]:checked').value;
+      sessionStorage.setItem('q1', answer);
+      window.location.replace('question2.html');
+    }
+  </script>
 </body>
 </html>
 

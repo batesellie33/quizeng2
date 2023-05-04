@@ -13,26 +13,19 @@
 	<h1>Preparing for your open book exam</h1>
 	<form onsubmit="saveResult(event)" class="form-container">
 		<p>How do you revise for an open book exam?</p>
-		<input type="radio" name="q8" value="A"> Create a comprehensive study guide that covers all material<br>
-		<input type="radio" name="q8" value="B"> Practice answering past exam questions or practice problems<br>
-		<input type="radio" name="q8" value="C"> Do not revise for the exam<br>
+		<input type="radio" name="q8" value="2"> Create a comprehensive study guide that covers all material<br>
+		<input type="radio" name="q8" value="1"> Practice answering past exam questions or practice problems<br>
+		<input type="radio" name="q8" value="0"> Do not revise for the exam<br>
 		<button type="submit">Next Question</button>
 	</form>
-	<script>
-		function saveResult(event) {
-			event.preventDefault();
-			const answer = document.querySelector('input[name="q8"]:checked').value;
-			let score = 0;
-			if (answer === 'A') {
-				score = 2;
-			} else if (answer === 'B') {
-				score = 1;
-			} else {
-				score = 0;
-			}
-			sessionStorage.setItem('q8', score);
-			window.location.replace('results.html');
-		}
-	</script>
+<script>
+    function saveResult(event) {
+      event.preventDefault();
+      const answer = document.querySelector('input[name="q1"]:checked').value;
+      sessionStorage.setItem('q1', answer);
+      window.location.replace('question2.html');
+    }
+  </script>
 </body>
+</html>
 </html>
