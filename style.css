@@ -51,7 +51,7 @@
 body {
   background-color: black;
   boarder-left: 20px;
-  font-size: 24pt;
+  font-size: 20pt;
 }
 
 h1 {
@@ -124,4 +124,9 @@ button[type="start-button"]:hover {
 
 li {
   font-size: 20pt;
+}
+input[type="radio"] {
+  margin: 10px 0;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5); /* For Safari and Chrome */
 }
