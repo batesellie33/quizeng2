@@ -1,30 +1,38 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
-	<title>What type of engineer should you be?</title>
+	<title>Study Skills</title>
 </head>
 <body>
 <div class="header">
   <img src="tedi-logo.png" alt="Logo">
 </div>
-	<h1>What type of engineer should you be?</h1>
-	<form onsubmit="saveResult(event)"class="form-container">
-		<p>What is your problem-solving style?</p>
-		<input type="radio" name="q4" value="A"> Analysing data and making calculations<br>
-		<input type="radio" name="q4" value="B"> Trial and error experiments<br>
-		<input type="radio" name="q4" value="C"> Brainstorming and creating<br>
-		<input type="radio" name="q4" value="D"> Collaborating and communicating<br>
+	<h1>Preparing for your open book exam</h1>
+	<form onsubmit="saveResult(event)" class="form-container">
+		<p>How do you allocate time for studying?</p>
+		<input type="radio" name="q1" value="A"> Create a detailed schedule and stick to it<br>
+		<input type="radio" name="q1" value="B"> Prioritise studying over other activities, even socialising or leisure time<br>
+		<input type="radio" name="q1" value="C"> Do not allocate enough time for studying<br>
 		<button type="submit">Next Question</button>
 	</form>
 	<script>
 		function saveResult(event) {
-  event.preventDefault();
-  const answer = document.querySelector('input[name="q4"]:checked').value;
-  sessionStorage.setItem('q4', answer);
-  window.location.replace('question5.html');
-}
+			event.preventDefault();
+			const answer = document.querySelector('input[name="q1"]:checked').value;
+			let score = 0;
+			if (answer === 'A') {
+				score = 2;
+			} else if (answer === 'B') {
+				score = 1;
+			} else {
+				score = 0;
+			}
+			sessionStorage.setItem('q4', score);
+			window.location.replace('question5.html');
+		}
 	</script>
 </body>
 </html>

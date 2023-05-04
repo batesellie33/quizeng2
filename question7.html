@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Study Skills</title>
+</head>
+<body>
+<div class="header">
+  <img src="tedi-logo.png" alt="Logo">
+</div>
+	<h1>Preparing for your open book exam</h1>
+	<form onsubmit="saveResult(event)" class="form-container">
+		<p>How do you handle distractions while studying?</p>
+		<input type="radio" name="q1" value="A"> Allocate specific amounts of time for each question and stay on track<br>
+		<input type="radio" name="q1" value="B"> Spend too much time on one question and rush through the rest<br>
+		<input type="radio" name="q1" value="C"> Do not manage time effectively during the exam<br>
+		<button type="submit">Next Question</button>
+	</form>
+	<script>
+		function saveResult(event) {
+			event.preventDefault();
+			const answer = document.querySelector('input[name="q1"]:checked').value;
+			let score = 0;
+			if (answer === 'A') {
+				score = 2;
+			} else if (answer === 'B') {
+				score = 1;
+			} else {
+				score = 0;
+			}
+			sessionStorage.setItem('q7', score);
+			window.location.replace('question8.html');
+		}
+	</script>
+</body>
+</html>

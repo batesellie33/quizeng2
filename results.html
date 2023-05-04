@@ -3,41 +3,48 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
-	<title>What type of engineer should you be?</title>
+	<title>Study Skills</title>
 </head>
 <body>
 <div class="header">
   <img src="tedi-logo.png" alt="Logo">
 </div>
 	<h1>Results</h1>
-	<p>Your results are in! Based on your answers, we think you should be a:</p>
+	<p> Based on your answers you should consider the following feedback to improve your study skills ahead of the open book exam:</p>
 	<p id="result"></p>
 	<button id="retry-button" onclick="window.location.href = 'question1.html'">Go Back and Retake the Quiz</button>
-
-
 	<script>
-		function goBack() {
-			window.history.back();
-		}
+	function goBack() {
+		window.history.back();
+	}
 
-		// get the result from the query string
-		const queryString = window.location.search;
-		const urlParams = new URLSearchParams(queryString);
-		const result = urlParams.get('result') || '';
-
-		// display the result on the page
-		let resultText = '';
-		if (result === 'A') {
-			resultText = 'Math or Civil Engineer';
-			document.getElementById('result').innerHTML = resultText + '<br><img src="math-civil-engineer.png">';
-		} else if (result === 'B') {
-			resultText = 'Computer or Data Engineer';
-		} else if (result === 'C') {
-			resultText = 'Product or Mechanical Engineer';
-		} else if (result === 'D') {
-			resultText = 'Environmental or Systems Engineer';
+	// get the user's answers from the query string
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	let score = 0;
+	
+	// calculate the user's score
+	for (let i = 1; i <= 8; i++) {
+		const answer = urlParams.get('q' + i) || '';
+		if (answer === 'a') {
+			score += 2;
+		} else if (answer === 'b') {
+			score += 1;
 		}
-		document.getElementById('result').textContent = resultText;
+	}
+
+	// display the appropriate result based on the user's score
+	let resultText = '';
+	if (score >= 16) {
+		resultText = 'Your notetaking, time management, and exam revision skills are exceptional and highly effective for open book exams.';
+		document.getElementById('result').innerHTML = resultText + '<br><img src="math-civil-engineer.png">';
+	} else if (score >= 12) {
+		resultText = 'Your notetaking, time management, and exam revision skills for open book exams are strong but could use some refinement in certain areas.';
+	} else {
+		resultText = 'Your notetaking, time management, and exam revision skills for open book exams are good, but there is room for improvement. Consider seeking feedback from peers or a professor to identify areas for growth.';
+	}
+	document.getElementById('result').textContent = resultText;
 	</script>
 </body>
 </html>
+
